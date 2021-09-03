@@ -50,5 +50,5 @@ build_script:
 
 artifacts:
   - path: export/release/windows/bin
-    name: KadeEngine-Windows
+    name: vs-carl-Windows
     type: zip

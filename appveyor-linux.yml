@@ -32,16 +32,18 @@ install:
   - haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
   - haxelib run lime rebuild extension-webm linux
   - haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit.git
+  - haxelib run lime rebuild hxvm-luajit linux
+  - haxelib run lime rebuild linc_luajit linux
   - haxelib install actuate
   - haxelib list
-  - cd /home/appveyor/projects/kade-engine-linux
+  - cd /home/appveyor/projects/vs-carl-linux
 
 build_script:
   - haxelib run lime build linux
 
 after_build:
-  - tar -cvf KadeEngine-Linux.tar -C /home/appveyor/projects/kade-engine-linux/export/release/linux/bin .
+  - tar -cvf vs-carl-Linux.tar -C /home/appveyor/projects/vs-carl-linux/export/release/linux/bin .
 
 artifacts:
-- path: KadeEngine-Linux.tar
+- path: vs-carl-Linux.tar
   name: Kade Engine for Linux
