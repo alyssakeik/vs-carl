@@ -1,11 +1,11 @@
 package;
 
-import flixel.FlxSprite;
-import flixel.FlxG;
 import flixel.FlxBasic;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.effects.chainable.FlxWaveEffect;
 import flixel.group.FlxGroup;
 import flixel.system.FlxSound;
-import flixel.addons.effects.chainable.FlxWaveEffect;
 
 class Stage
 {
@@ -41,36 +41,36 @@ class Stage
 					curStage = 'basement';
 
 					var wall:FlxSprite = new FlxSprite(-553.85, -290.3);
-					wall.frames = Paths.getSparrowAtlas('carl/background');
+					wall.frames = Paths.getSparrowAtlas('background', 'carl');
 					wall.animation.addByPrefix('idle', 'BACKGROUND WALL', 24);
 					wall.animation.play('idle');
-					wall.scrollFactor.set(0.9, 0.9);
+					wall.scrollFactor.set(1, 1);
 					wall.active = true;
-					add(wall);
+					toAdd.push(wall);
 
 					var torch:FlxSprite = new FlxSprite(435.9, 122.65);
-					torch.frames = Paths.getSparrowAtlas('carl/the_torch');
+					torch.frames = Paths.getSparrowAtlas('the_torch', 'carl');
 					torch.animation.addByPrefix('idle', 'TORCH', 24);
 					torch.animation.play('idle');
-					torch.scrollFactor.set(0.9, 0.9);
+					torch.scrollFactor.set(1, 1);
 					torch.active = true;
-					add(torch);
+					toAdd.push(torch);
 
 					var floor:FlxSprite = new FlxSprite(-422.35, 564.45);
-					floor.frames = Paths.getSparrowAtlas('carl/background');
+					floor.frames = Paths.getSparrowAtlas('fixed floor', 'carl');
 					floor.animation.addByPrefix('idle', 'BACKGROUND FLOOR1', 24);
 					floor.animation.play('idle');
-					floor.scrollFactor.set(0.9, 0.9);
+					floor.scrollFactor.set(1, 1);
 					floor.active = true;
-					add(floor);
+					toAdd.push(floor);
 
-					var stairs:FlxSprite = new FlxSprite(1211.65, 123.65);
-					stairs.frames = Paths.getSparrowAtlas('carl/background');
+					var stairs:FlxSprite = new FlxSprite(1403.7, 90.8);
+					stairs.frames = Paths.getSparrowAtlas('fixed floor', 'carl');
 					stairs.animation.addByPrefix('idle', 'BACKGROUND FLOOR 2', 24);
 					stairs.animation.play('idle');
-					stairs.scrollFactor.set(0.9, 0.9);
+					stairs.scrollFactor.set(1, 1);
 					stairs.active = true;
-					add(stairs);
+					toAdd.push(stairs);
 				}
 			case 'cave-thing':
 				{
@@ -78,81 +78,128 @@ class Stage
 					curStage = 'cave-thing';
 
 					var wall:FlxSprite = new FlxSprite(-904.75, -384.15);
-					wall.frames = Paths.getSparrowAtlas('carl/backgroundphase2');
+					wall.frames = Paths.getSparrowAtlas('backgroundphase2', 'carl');
 					wall.animation.addByPrefix('idle', 'background wall shit', 24);
 					wall.animation.play('idle');
-					wall.scrollFactor.set(0.9, 0.9);
+					wall.scrollFactor.set(1, 1);
 					wall.active = true;
-					add(wall);
+					toAdd.push(wall);
 
-					var bones:FlxSprite = new FlxSprite(-141.9, 224).loadGraphic(Paths.image('carl/PILE-OBONES'));
+					var bones:FlxSprite = new FlxSprite(-141.9, 224).loadGraphic(Paths.image('PILE-OBONES', 'carl'));
 					bones.antialiasing = true;
-					bones.scrollFactor.set(0.9, 0.9);
+					bones.scrollFactor.set(1, 1);
 					bones.active = false;
-					add(bones);
+					toAdd.push(bones);
 
 					var crystal:FlxSprite = new FlxSprite(364.9, 6.85);
-					crystal.frames = Paths.getSparrowAtlas('carl/crystal');
+					crystal.frames = Paths.getSparrowAtlas('crystal', 'carl');
 					crystal.animation.addByPrefix('idle', 'Crystrill', 24);
 					crystal.animation.play('idle');
-					crystal.scrollFactor.set(0.9, 0.9);
+					crystal.scrollFactor.set(1, 1);
 					crystal.active = true;
-					add(crystal);
+					toAdd.push(crystal);
 
 					var rails:FlxSprite = new FlxSprite(-619.4, 443.6);
-					rails.frames = Paths.getSparrowAtlas('carl/backgroundphase2');
+					rails.frames = Paths.getSparrowAtlas('backgroundphase2', 'carl');
 					rails.animation.addByPrefix('idle', 'the fucking rails', 24);
 					rails.animation.play('idle');
-					rails.scrollFactor.set(0.9, 0.9);
+					rails.scrollFactor.set(1, 1);
 					rails.active = true;
-					add(rails);
+					toAdd.push(rails);
+
+					var otherwall:FlxSprite = new FlxSprite(-832.35, -614.75);
+					otherwall.frames = Paths.getSparrowAtlas('backgroundphase2', 'carl');
+					otherwall.animation.addByPrefix('idle', 'BROKEN WALL', 24);
+					otherwall.animation.play('idle');
+					otherwall.scrollFactor.set(1, 1);
+					otherwall.active = true;
+					layInFront[2].push(otherwall);
+
+					var torch1:FlxSprite = new FlxSprite(-584.85, 122.25);
+					torch1.frames = Paths.getSparrowAtlas('the_torch', 'carl');
+					torch1.animation.addByPrefix('idle', 'TORCH', 24);
+					torch1.animation.play('idle');
+					torch1.scrollFactor.set(1, 1);
+					torch1.active = true;
+					layInFront[2].push(torch1);
+
+					var torch2:FlxSprite = new FlxSprite(1431, 126.8);
+					torch2.frames = Paths.getSparrowAtlas('the_torch', 'carl');
+					torch2.animation.addByPrefix('idle', 'TORCH', 24);
+					torch2.animation.play('idle');
+					torch2.scrollFactor.set(1, 1);
+					torch2.active = true;
+					layInFront[2].push(torch2);
+
+
 				}
 			case 'finale':
 				{
-					camZoom = 0.80;
+					camZoom = 0.70;
 					curStage = 'finale';
 
 					var wall:FlxSprite = new FlxSprite(-1657.4, -1409.7);
-					wall.frames = Paths.getSparrowAtlas('carl/backgroundthirdphase');
+					wall.frames = Paths.getSparrowAtlas('backgroundthirdphase', 'carl');
 					wall.animation.addByPrefix('idle', 'COMPLEGE BACKGOUND', 24);
 					wall.animation.play('idle');
-					wall.scrollFactor.set(0.9, 0.9);
+					wall.scrollFactor.set(1, 1);
 					wall.active = true;
-					add(wall);
+					toAdd.push(wall);
 
 					var crystal:FlxSprite = new FlxSprite(196.35, -1240.65);
-					crystal.frames = Paths.getSparrowAtlas('carl/HUGE');
+					crystal.frames = Paths.getSparrowAtlas('HUGE', 'carl');
 					crystal.animation.addByPrefix('idle', 'A FUCKING LARGE AS FUUUUUUCK CRYSSAL', 24);
 					crystal.animation.play('idle');
-					crystal.scrollFactor.set(0.9, 0.9);
+					crystal.scrollFactor.set(1, 1);
 					crystal.active = true;
-					add(crystal);
+					toAdd.push(crystal);
 
 					var altar:FlxSprite = new FlxSprite(-200.75, -86.9);
-					altar.frames = Paths.getSparrowAtlas('carl/backgroundthirdphase');
+					altar.frames = Paths.getSparrowAtlas('backgroundthirdphase', 'carl');
 					altar.animation.addByPrefix('idle', 'THE FUCKING ALTAR', 24);
 					altar.animation.play('idle');
-					altar.scrollFactor.set(0.9, 0.9);
+					altar.scrollFactor.set(1, 1);
 					altar.active = true;
-					add(altar);
+					toAdd.push(altar);
 				}
-			// case 'raveyard':
-			// 	{
-			// 		camZoom = 0.80;
-			// 		curStage = 'raveyard';
+			case 'outside':
+				{
+					camZoom = 0.70;
+					curStage = 'outside';
 
-			// 		var background = new FlxSprite();
-			// 		background.frames = Paths.getSparrowAtlas('carl/SHITYOURSELF4');
-			// 		background.scrollFactor.set(0.9, 0.9);
+					var wall:FlxSprite = new FlxSprite(-884.7, -519.95);
+					wall.frames = Paths.getSparrowAtlas('phase4shit', 'carl');
+					wall.animation.addByPrefix('idle', 'HTE MOTHA FUCKIN BACKGROUND FOR $', 24);
+					wall.animation.play('idle');
+					wall.scrollFactor.set(1, 1);
+					wall.active = true;
+					toAdd.push(wall);
 
-			// 		add(background);
+					var crystal:FlxSprite = new FlxSprite(-1142.5, -231.3);
+					crystal.frames = Paths.getSparrowAtlas('phase4shit', 'carl');
+					crystal.animation.addByPrefix('idle', 'LMAO RIP BOZO CRYSTAL', 24);
+					crystal.animation.play('idle');
+					crystal.scrollFactor.set(1, 1);
+					crystal.active = true;
+					toAdd.push(crystal);
 
-			// 		crowd = new FlxSprite();
-			// 		crowd.frames = Paths.getSparrowAtlas('carl/THECROWDBOPS');
-			// 		crowd.animation.addByPrefix('bop', "the crowd but theyre orange", 24, false);
-			// 		crowd.antialiasing = true;
-			// 		crowd.scrollFactor.set(1, 1);
-			// 	}
+					var skeletoncrowd:FlxSprite = new FlxSprite(-721.55, 645.95);
+					skeletoncrowd.frames = Paths.getSparrowAtlas('phase4shit', 'carl');
+					skeletoncrowd.animation.addByPrefix('idle', 'the crowd but theyre orange', 24, false);
+					skeletoncrowd.scrollFactor.set(1, 1);
+					skeletoncrowd.antialiasing = true;
+					swagBacks['skeletoncrowd'] = skeletoncrowd;
+					layInFront[2].push(skeletoncrowd);
+					animatedBacks.push(skeletoncrowd);
+
+					var ground:FlxSprite = new FlxSprite(-17.75, 1062.85).loadGraphic(Paths.image('CREAM', 'carl'));
+					ground.updateHitbox();
+					ground.antialiasing = true;
+					ground.scrollFactor.set(1, 1);
+					ground.active = false;
+					toAdd.push(ground);
+
+				}
 			default:
 				{
 					camZoom = 0.9;

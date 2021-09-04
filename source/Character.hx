@@ -78,6 +78,49 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
+
+			case 'carl-phase-1':
+				var tex = Paths.getSparrowAtlas('carl-phase-1', 'shared', true);
+				frames = tex;
+
+				animation.addByPrefix('idle', 'Carl Idle', 24, false);
+				animation.addByPrefix('singUP', 'Carl Up', 24, false);
+				animation.addByPrefix('singDOWN', 'Carl Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Carl Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Carl Right', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+
+			case 'carl-phase-2':
+				var tex = Paths.getSparrowAtlas('carl-phase-2', 'shared', true);
+				frames = tex;
+
+				animation.addByPrefix('idle', 'Carl 2 Idle', 24, false);
+				animation.addByPrefix('singUP', 'Carl 2 Up', 24, false);
+				animation.addByPrefix('singDOWN', 'Carl 2 Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Carl 2 Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Carl 2 Right', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+
+			case 'carl-phase-3':
+				var tex = Paths.getSparrowAtlas('carl-phase-3', 'shared', true);
+				frames = tex;
+
+				animation.addByPrefix('idle', 'Carl 3 Idle', 24, false);
+				animation.addByPrefix('singUP', 'Carl 3 Up', 24, false);
+				animation.addByPrefix('singDOWN', 'Carl 3 Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Carl 3 Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Carl 3 Right', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+
 		}
 
 		dance();

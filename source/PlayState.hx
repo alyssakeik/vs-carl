@@ -258,6 +258,9 @@ class PlayState extends MusicBeatState
 	// Per song additive offset
 	public static var songOffset:Float = 0;
 
+	// Note splash shit
+	var grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
+
 	// BotPlay text
 	private var botPlayState:FlxText;
 	// Replay shit
@@ -413,6 +416,10 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.add(camSustains);
 		FlxG.cameras.add(camNotes);
 
+		var tempNoteSplash = new NoteSplash(0, 0, 0);
+		grpNoteSplashes.add(tempNoteSplash);
+		tempNoteSplash.alpha = 0.1;
+
 		camHUD.zoom = PlayStateChangeables.zoom;
 
 		FlxCamera.defaultCameras = [camGame];
@@ -471,8 +478,8 @@ class PlayState extends MusicBeatState
 		switch(songLowercase)
 		{
 			//if the song has dialogue, so we don't accidentally try to load a nonexistant file and crash the game
-			case 'senpai' | 'roses' | 'thorns':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/$songLowercase/dialogue'));
+			case 'dungeon' | 'crystalized' | 'necromancipation' | 'raveyard':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/$songLowercase/Dialogue'));
 		}
 
 		// defaults if no stage was found in chart
@@ -482,31 +489,22 @@ class PlayState extends MusicBeatState
 		{
 			switch (storyWeek)
 			{
-				case 2:
-					stageCheck = 'halloween';
-				case 3:
-					stageCheck = 'philly';
-				case 4:
-					stageCheck = 'limo';
-				case 5:
-					if (songLowercase == 'winter-horrorland')
+				case 1:
+				{
+					switch (SONG.song.toLowerCase())
 					{
-						stageCheck = 'mallEvil';
+						case 'dungeon':
+							stageCheck = 'basement';
+						case 'crystalized':
+							stageCheck = 'cave-thing';
+						case 'necromancipation':
+							stageCheck = 'finale';
+						case 'raveyard':
+							stageCheck = 'raveyard';
 					}
-					else
-					{
-						stageCheck = 'mall';
-					}
-				case 6:
-					if (songLowercase == 'thorns')
-					{
-						stageCheck = 'schoolEvil';
-					}
-					else
-					{
-						stageCheck = 'school';
-					}
-					// i should check if its stage (but this is when none is found in chart anyway)
+
+				}
+
 			}
 		}
 		else
@@ -677,6 +675,22 @@ class PlayState extends MusicBeatState
 						boyfriend.y += 220;
 						gf.x += 180;
 						gf.y += 300;
+					case 'basement':
+						dad.setPosition(-431.9, -42.5);
+						boyfriend.setPosition(1014.85, 292.55);
+						gf.visible = false;
+					case 'cave-thing':
+						dad.setPosition(-736.15, -94.7);
+						boyfriend.setPosition(1097.75, 305.45);
+						gf.visible = false;
+					case 'finale':
+						dad.setPosition(-737.9, -94);
+						boyfriend.setPosition(1017.85, 457.45);
+						gf.visible = false;
+					case 'outside':
+						dad.setPosition(-706.65, 315.25);
+						boyfriend.setPosition(977.35, 630.1);
+						gf.visible = false;
 				}
 		}
 		else
@@ -778,6 +792,7 @@ class PlayState extends MusicBeatState
 
 		strumLineNotes = new FlxTypedGroup<StaticArrow>();
 		add(strumLineNotes);
+		add(grpNoteSplashes);
 
 		playerStrums = new FlxTypedGroup<StaticArrow>();
 		cpuStrums = new FlxTypedGroup<StaticArrow>();
@@ -942,6 +957,8 @@ class PlayState extends MusicBeatState
               healthBar.createFilledBar(0xFFF76D6D, 0xFF0097C4);
              case 'spirit':
               healthBar.createFilledBar(0xFFAD0505, 0xFF0097C4);
+			 case 'carl-phase-1' | 'carl-phase-2' | 'carl-phase-3':
+			  healthBar.createFilledBar(0xFFB065FF, 0xFF0097C4);
             }
         }
         else
@@ -1004,6 +1021,7 @@ class PlayState extends MusicBeatState
 		iconP2.y = healthBar.y - (iconP2.height / 2);
 		add(iconP2);
 
+		grpNoteSplashes.cameras = [camHUD];
 		strumLineNotes.cameras = [camHUD];
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
@@ -1063,13 +1081,14 @@ class PlayState extends MusicBeatState
 							});
 						});
 					});
-				case 'senpai':
-					schoolIntro(doof);
-				case 'roses':
-					FlxG.sound.play(Paths.sound('ANGRY'));
-					schoolIntro(doof);
-				case 'thorns':
-					schoolIntro(doof);
+				case 'dungeon':
+					CarlDialogue(doof);
+				case 'crystalized':
+					CarlDialogue(doof);
+				case 'necromancipation':
+					CarlDialogue(doof);
+				case 'raveyard':
+					CarlDialogue(doof);
 				default:
 					new FlxTimer().start(1, function(timer) {
 						startCountdown();
@@ -1172,6 +1191,22 @@ class PlayState extends MusicBeatState
 					startCountdown();
 
 				remove(black);
+			}
+		});
+	}
+
+	function CarlDialogue(?dialogueBox:DialogueBox):Void
+	{
+		new FlxTimer().start(0.3, function(tmr:FlxTimer)
+		{
+			{
+				if (dialogueBox != null)
+				{
+					inCutscene = true;
+					add(dialogueBox);
+				}
+				else
+					startCountdown();
 			}
 		});
 	}
@@ -3429,13 +3464,57 @@ class PlayState extends MusicBeatState
 
 					FlxG.sound.music.stop();
 					vocals.stop();
+
+					function alyisunbelievablystupid():Void
+					{
+						prevCamFollow = camFollow;
+						if (dialogue[1] == null)
+						{		
+							var congarats:FlxSprite;
+							camFollow.y = 0;
+							camFollow.x = 0;
+							congarats = new FlxSprite().loadGraphic(Paths.image('congrats', 'carl'), false);
+							congarats.setGraphicSize(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3));
+							congarats.antialiasing = true;
+							congarats.screenCenter();
+							add(congarats);
+							congarats.visible = true;
+
+							openSubState(new ResultsScreen());
+							new FlxTimer().start(1, function(tmr:FlxTimer)
+							{
+								inResults = true;
+							});
+						}
+					}
+
 					if (FlxG.save.data.scoreScreen)
 					{
+						if (SONG.song.toLowerCase() == 'raveyard')
+						{
+							for (i in strumLineNotes)
+								i.visible = false;
+							camZooming = false;
+							canPause = false;
+							FlxG.sound.music.stop();
+							vocals.stop();
+							var dialogue = CoolUtil.coolTextFile(Paths.txt('carl/DialogueEnd/raveyardDialogueEnd'));
+							var doof:DialogueBox = new DialogueBox(false, dialogue);
+							doof.scrollFactor.set();
+							doof.finishThing = alyisunbelievablystupid;
+							doof.cameras = [camHUD];
+							add(doof);
+
+							prevCamFollow = camFollow;
+						}
+						else
+						{
 						openSubState(new ResultsScreen());
 						new FlxTimer().start(1, function(tmr:FlxTimer)
 							{
 								inResults = true;
 							});
+						}
 					}
 					else
 					{
@@ -3493,13 +3572,77 @@ class PlayState extends MusicBeatState
 
 					FlxTransitionableState.skipNextTransIn = true;
 					FlxTransitionableState.skipNextTransOut = true;
-					prevCamFollow = camFollow;
 
-					PlayState.SONG = Song.loadFromJson(poop, PlayState.storyPlaylist[0]);
-					FlxG.sound.music.stop();
+					function alyisreallystupid():Void
+					{
+						prevCamFollow = camFollow;
+						if (dialogue[1] == null)
+						{
+							PlayState.SONG = Song.loadFromJson(poop, PlayState.storyPlaylist[0]);
+							FlxG.sound.music.stop();
 
-					LoadingState.loadAndSwitchState(new PlayState());
-					clean();
+							LoadingState.loadAndSwitchState(new PlayState());
+							clean();
+						}
+					}
+
+					function alyisstupid():Void
+					{
+						for (i in strumLineNotes)
+							i.visible = false;
+						camZooming = false;
+						canPause = false;
+						FlxG.sound.music.stop();
+						vocals.stop();
+						switch (SONG.song.toLowerCase())
+							{
+								case 'dungeon':
+									var dialogue = CoolUtil.coolTextFile(Paths.txt('carl/DialogueEnd/dungeonDialogueEnd'));
+									var doof:DialogueBox = new DialogueBox(false, dialogue);
+									doof.scrollFactor.set();
+									doof.finishThing = alyisreallystupid;
+									doof.cameras = [camHUD];
+									add(doof);
+
+								prevCamFollow = camFollow;
+								case 'crystalized':
+									var dialogue = CoolUtil.coolTextFile(Paths.txt('carl/DialogueEnd/crystalizedDialogueEnd'));
+									var doof:DialogueBox = new DialogueBox(false, dialogue);
+									doof.scrollFactor.set();
+									doof.finishThing = alyisreallystupid;
+									doof.cameras = [camHUD];
+									add(doof);
+
+									prevCamFollow = camFollow;
+								case 'necromancipation':
+									var dialogue = CoolUtil.coolTextFile(Paths.txt('carl/DialogueEnd/necromancipationDialogueEnd'));
+									var doof:DialogueBox = new DialogueBox(false, dialogue);
+									doof.scrollFactor.set();
+									doof.finishThing = alyisreallystupid;
+									doof.cameras = [camHUD];
+									add(doof);
+
+									prevCamFollow = camFollow;
+								case 'raveyard':
+									var dialogue = CoolUtil.coolTextFile(Paths.txt('carl/DialogueEnd/raveyardDialogueEnd'));
+									var doof:DialogueBox = new DialogueBox(false, dialogue);
+									doof.scrollFactor.set();
+									doof.finishThing = alyisreallystupid;
+									doof.cameras = [camHUD];
+									add(doof);
+
+									prevCamFollow = camFollow;
+								default:
+									prevCamFollow = camFollow;
+
+									PlayState.SONG = Song.loadFromJson(poop, PlayState.storyPlaylist[0]);
+									FlxG.sound.music.stop();
+
+									LoadingState.loadAndSwitchState(new PlayState());
+									clean();
+							}
+					}
+					alyisstupid();
 				}
 			}
 			else
@@ -3616,6 +3759,10 @@ class PlayState extends MusicBeatState
 					health += 0.04;
 				if (FlxG.save.data.accuracyMod == 0)
 					totalNotesHit += 1;
+
+				var bruhSplash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
+				bruhSplash.setupNoteSplash(daNote.noteData, daNote.x, strumLine.y);
+				grpNoteSplashes.add(bruhSplash);
 				sicks++;
 		}
 
@@ -4763,6 +4910,9 @@ class PlayState extends MusicBeatState
 							for (bg in Stage.animatedBacks)
 								bg.animation.play('idle');
 						}
+					case 'outside':
+						for (bg in Stage.animatedBacks)
+							bg.animation.play('idle');
 
 					case 'limo':
 						if (FlxG.save.data.distractions)

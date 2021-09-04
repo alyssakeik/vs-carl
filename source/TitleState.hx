@@ -116,6 +116,7 @@ class TitleState extends MusicBeatState
 	}
 
 	var logoBl:FlxSprite;
+	var wendys:FlxSprite;
 	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
@@ -130,12 +131,17 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
+		wendys = new FlxSprite().loadGraphic(Paths.image('wendys'));
+		wendys.antialiasing = true;
+		add(wendys);
+		wendys.visible = false;
+
 		if (Main.watermarks) {
 			logoBl = new FlxSprite(-150, 1500);
-			logoBl.frames = Paths.getSparrowAtlas('KadeEngineLogoBumpin');
+			logoBl.frames = Paths.getSparrowAtlas('fnfbbb');
 		} else {
 			logoBl = new FlxSprite(-150, -100);
-			logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
+			logoBl.frames = Paths.getSparrowAtlas('fnfbbb');
 		}
 		logoBl.antialiasing = FlxG.save.data.antialiasing;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
@@ -465,6 +471,7 @@ class TitleState extends MusicBeatState
 				}, 0);
 
 			skippedIntro = true;
+			wendys.visible = true;
 		}
 	}
 }
