@@ -79,6 +79,20 @@ class Character extends FlxSprite
 
 				flipX = true;
 
+			case 'bf-carl-dead':
+				var tex = Paths.getSparrowAtlas('bf-carl-dead', 'shared', true);
+				frames = tex;
+
+				animation.addByPrefix('singUP', "BF dies", 24, false);
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop0", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+				animation.play('firstDeath');
+
+				loadOffsetFile(curCharacter);
+
+				flipX = true;
+
 			case 'carl-phase-1':
 				var tex = Paths.getSparrowAtlas('carl-phase-1', 'shared', true);
 				frames = tex;

@@ -58,7 +58,7 @@ class Stage
 
 					var floor:FlxSprite = new FlxSprite(-422.35, 564.45);
 					floor.frames = Paths.getSparrowAtlas('fixed floor', 'carl');
-					floor.animation.addByPrefix('idle', 'BACKGROUND FLOOR1', 24);
+					floor.animation.addByPrefix('idle', 'BACKGROUND FLOOR 1', 24);
 					floor.animation.play('idle');
 					floor.scrollFactor.set(1, 1);
 					floor.active = true;
@@ -93,7 +93,7 @@ class Stage
 
 					var crystal:FlxSprite = new FlxSprite(364.9, 6.85);
 					crystal.frames = Paths.getSparrowAtlas('crystal', 'carl');
-					crystal.animation.addByPrefix('idle', 'Crystrill', 24);
+					crystal.animation.addByPrefix('idle', 'Crystrill instance 1', 24);
 					crystal.animation.play('idle');
 					crystal.scrollFactor.set(1, 1);
 					crystal.active = true;

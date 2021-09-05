@@ -229,6 +229,11 @@ class PlayState extends MusicBeatState
 	var scoreTxt:FlxText;
 	var replayTxt:FlxText;
 
+	var needSkip:Bool = false;
+	var skipActive:Bool = false;
+	var skipText:FlxText;
+	var skipTo:Float;
+
 	public static var campaignScore:Int = 0;
 
 	public static var daPixelZoom:Float = 6;
@@ -781,6 +786,55 @@ class PlayState extends MusicBeatState
 			doof.finishThing = startCountdown;
 		}
 
+		if (!isStoryMode)
+		{
+			var firstNoteTime = Math.POSITIVE_INFINITY;
+			var playerTurn = false;
+			for (index => section in SONG.notes)
+			{
+				if (section.sectionNotes.length > 0 && !isSM)
+				{
+					if (section.startTime > 5000)
+					{
+						needSkip = true;
+						skipTo = section.startTime;
+					}
+					break;
+				}
+				else if (isSM)
+				{
+					for (note in section.sectionNotes)
+					{
+						if (note[0] < firstNoteTime)
+						{
+							if (!PlayStateChangeables.Optimize)
+							{
+								firstNoteTime = note[0];
+								if (note[1] > 3)
+									playerTurn = true;
+								else
+									playerTurn = false;
+							}
+							else if (note[1] > 3)
+							{
+								firstNoteTime = note[0];
+							}
+						}
+					}
+					if (index + 1 == SONG.notes.length)
+					{
+						var timing = ((!playerTurn && !PlayStateChangeables.Optimize) ? firstNoteTime : TimingStruct.getTimeFromBeat(TimingStruct.getBeatFromTime(firstNoteTime)
+							- 4));
+						if (timing > 5000)
+						{
+							needSkip = true;
+							skipTo = timing;
+						}
+					}
+				}
+			}
+		}
+
 		Conductor.songPosition = -5000;
 		Conductor.rawPosition = Conductor.songPosition;
 
@@ -1204,6 +1258,7 @@ class PlayState extends MusicBeatState
 				{
 					inCutscene = true;
 					add(dialogueBox);
+					FlxG.sound.music.stop();
 				}
 				else
 					startCountdown();
@@ -1607,6 +1662,17 @@ class PlayState extends MusicBeatState
 		for(i in 0...unspawnNotes.length)
 			if (unspawnNotes[i].strumTime < startTime)
 				unspawnNotes.remove(unspawnNotes[i]);
+
+		if (needSkip)
+		{
+			skipActive = true;
+			skipText = new FlxText(healthBarBG.x + 80, healthBarBG.y - 110, 500);
+			skipText.text = "Press Space to Skip Intro";
+			skipText.size = 30;
+			skipText.color = 0xFFADD8E6;
+			skipText.cameras = [camHUD];
+			add(skipText);
+		}
 	}
 
 	var debugNum:Int = 0;
@@ -2564,6 +2630,27 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
+		if (skipActive && Conductor.songPosition >= skipTo)
+		{
+			remove(skipText);
+			skipActive = false;
+		}
+
+		if (FlxG.keys.justPressed.SPACE && skipActive)
+		{
+			FlxG.sound.music.pause();
+			vocals.pause();
+			Conductor.songPosition = skipTo;
+
+			FlxG.sound.music.time = Conductor.songPosition;
+			FlxG.sound.music.play();
+
+			vocals.time = Conductor.songPosition;
+			vocals.play();
+			remove(skipText);
+			skipActive = false;
+		}
+
 		if (startingSong)
 		{
 			if (startedCountdown)
@@ -3467,24 +3554,9 @@ class PlayState extends MusicBeatState
 
 					function alyisunbelievablystupid():Void
 					{
-						prevCamFollow = camFollow;
 						if (dialogue[1] == null)
 						{		
-							var congarats:FlxSprite;
-							camFollow.y = 0;
-							camFollow.x = 0;
-							congarats = new FlxSprite().loadGraphic(Paths.image('congrats', 'carl'), false);
-							congarats.setGraphicSize(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3));
-							congarats.antialiasing = true;
-							congarats.screenCenter();
-							add(congarats);
-							congarats.visible = true;
-
-							openSubState(new ResultsScreen());
-							new FlxTimer().start(1, function(tmr:FlxTimer)
-							{
-								inResults = true;
-							});
+							FlxG.switchState(new EndingState());
 						}
 					}
 
@@ -3518,10 +3590,30 @@ class PlayState extends MusicBeatState
 					}
 					else
 					{
-						FlxG.sound.playMusic(Paths.music('freakyMenu'));
-						Conductor.changeBPM(102);
-						FlxG.switchState(new StoryMenuState());
-						clean();
+						if (SONG.song.toLowerCase() == 'raveyard')
+						{
+							for (i in strumLineNotes)
+								i.visible = false;
+							camZooming = false;
+							canPause = false;
+							FlxG.sound.music.stop();
+							vocals.stop();
+							var dialogue = CoolUtil.coolTextFile(Paths.txt('carl/DialogueEnd/raveyardDialogueEnd'));
+							var doof:DialogueBox = new DialogueBox(false, dialogue);
+							doof.scrollFactor.set();
+							doof.finishThing = alyisunbelievablystupid;
+							doof.cameras = [camHUD];
+							add(doof);
+
+							prevCamFollow = camFollow;
+						}
+						else
+						{
+							FlxG.sound.playMusic(Paths.music('freakyMenu'));
+							Conductor.changeBPM(102);
+							FlxG.switchState(new StoryMenuState());
+							clean();
+						}
 					}
 
 					#if cpp
