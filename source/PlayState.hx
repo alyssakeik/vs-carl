@@ -3132,7 +3132,6 @@ class PlayState extends MusicBeatState
 							var singData:Int = Std.int(Math.abs(daNote.noteData));
 							dad.playAnim('sing' + dataSuffix[singData] + altAnim, true);
 
-							if (FlxG.save.data.cpuStrums)
 							{
 								cpuStrums.forEach(function(spr:StaticArrow)
 								{
@@ -3166,7 +3165,6 @@ class PlayState extends MusicBeatState
 						var singData:Int = Std.int(Math.abs(daNote.noteData));
 						dad.playAnim('sing' + dataSuffix[singData] + altAnim, true);
 
-						if (FlxG.save.data.cpuStrums)
 						{
 							cpuStrums.forEach(function(spr:StaticArrow)
 							{
@@ -3362,7 +3360,6 @@ class PlayState extends MusicBeatState
 			});
 		}
 
-		if (FlxG.save.data.cpuStrums)
 		{
 			cpuStrums.forEach(function(spr:StaticArrow)
 			{
@@ -4290,7 +4287,6 @@ class PlayState extends MusicBeatState
 						{
 							goodNoteHit(daNote);
 							boyfriend.holdTimer = 0;
-							if (FlxG.save.data.cpuStrums)
 							{
 								playerStrums.forEach(function(spr:StaticArrow)
 								{
@@ -4313,7 +4309,6 @@ class PlayState extends MusicBeatState
 					{
 						goodNoteHit(daNote);
 						boyfriend.holdTimer = 0;
-						if (FlxG.save.data.cpuStrums)
 							{
 								playerStrums.forEach(function(spr:StaticArrow)
 								{
