@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="carl3_shadingtho.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Carl 3 Down0000" x="0" y="0" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0001" x="0" y="0" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0002" x="1618" y="0" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0003" x="1618" y="0" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0004" x="3236" y="0" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0005" x="3236" y="0" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0006" x="4854" y="0" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0007" x="4854" y="0" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0008" x="6472" y="0" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0009" x="6472" y="0" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0010" x="0" y="991" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0011" x="0" y="991" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0012" x="1618" y="991" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Down0013" x="1618" y="991" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0000" x="3236" y="991" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0001" x="3236" y="991" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0002" x="4854" y="991" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0003" x="4854" y="991" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0004" x="6472" y="991" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0005" x="6472" y="991" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0006" x="0" y="1982" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0007" x="0" y="1982" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0008" x="1618" y="1982" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0009" x="1618" y="1982" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0010" x="3236" y="1982" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0011" x="3236" y="1982" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0012" x="4854" y="1982" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Idle0013" x="4854" y="1982" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Left0000" x="6472" y="1982" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0001" x="6472" y="1982" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0002" x="0" y="2973" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0003" x="0" y="2973" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0004" x="1618" y="2973" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0005" x="1618" y="2973" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0006" x="3236" y="2973" width="1620" height="991"/>
+	<SubTexture name="Carl 3 Left0007" x="3236" y="2973" width="1620" height="991"/>
+	<SubTexture name="Carl 3 Left0008" x="4856" y="2973" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0009" x="4856" y="2973" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0010" x="6474" y="2973" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0011" x="6474" y="2973" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0012" x="0" y="3964" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Left0013" x="0" y="3964" width="1618" height="991" frameX="-2" frameY="0" frameWidth="1620" frameHeight="991"/>
+	<SubTexture name="Carl 3 Right0000" x="1618" y="3964" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0001" x="3236" y="3964" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0002" x="4854" y="3964" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0003" x="6472" y="3964" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0004" x="0" y="4955" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0005" x="1618" y="4955" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0006" x="3236" y="4955" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0007" x="4854" y="4955" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0008" x="6472" y="4955" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0009" x="6472" y="4955" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0010" x="0" y="5946" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0011" x="0" y="5946" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0012" x="1618" y="5946" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Right0013" x="1618" y="5946" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0000" x="3236" y="5946" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0001" x="3236" y="5946" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0002" x="4854" y="5946" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0003" x="4854" y="5946" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0004" x="6472" y="5946" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0005" x="6472" y="5946" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0006" x="0" y="6937" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0007" x="0" y="6937" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0008" x="1618" y="6937" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0009" x="1618" y="6937" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0010" x="3236" y="6937" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0011" x="3236" y="6937" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0012" x="4854" y="6937" width="1618" height="991"/>
+	<SubTexture name="Carl 3 Up0013" x="4854" y="6937" width="1618" height="991"/>
+</TextureAtlas>

@@ -611,7 +611,6 @@ class PlayState extends MusicBeatState
 						camPos.x += 600;
 						tweenCamIn();
 					}
-
 				case "spooky":
 					dad.y += 200;
 				case "monster":
@@ -646,10 +645,16 @@ class PlayState extends MusicBeatState
 						}
 						// evilTrail.scrollFactor.set(1.1, 1.1);
 					}
+					case 'carl-phase-1':
+						{
+							camPos.x += 50;
+							tweenCamIn();
+						}
 
 					dad.x -= 150;
 					dad.y += 100;
 					camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+
 			}
 
 			// REPOSITIONING PER STAGE
@@ -1027,7 +1032,7 @@ class PlayState extends MusicBeatState
 			+ (FlxMath.roundDecimal(songMultiplier, 2) != 1.00 ? " (" + FlxMath.roundDecimal(songMultiplier, 2) + "x)" : "")
 			+ " - "
 			+ CoolUtil.difficultyFromInt(storyDifficulty)
-			+ (Main.watermarks ? " | KE " + MainMenuState.kadeEngineVer : ""), 16);
+			+ (" | V.2.0"), 16);
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		kadeEngineWatermark.scrollFactor.set();
 		add(kadeEngineWatermark);
@@ -2412,8 +2417,6 @@ class PlayState extends MusicBeatState
 				maxNPS = nps;
 		}
 
-		if (FlxG.keys.justPressed.NINE)
-				iconP1.swapOldIcon();
 		if (!PlayStateChangeables.Optimize)
 			switch (Stage.curStage)
 			{

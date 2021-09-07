@@ -1,0 +1,4 @@
+singUP 362 4
+firstDeath 362 4
+deathLoop 30 -2
+deathConfirm 30 -2

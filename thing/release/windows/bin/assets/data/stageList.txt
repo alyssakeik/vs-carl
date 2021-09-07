@@ -1,0 +1,5 @@
+stage
+basement
+cave-thing
+finale
+raveyard
