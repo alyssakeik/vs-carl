@@ -1,5 +1,4 @@
-Tutorial:gf:0
-Dungeon:carl-phase-1:1
-Crystalized:carl-phase-1:1
-Necromancipation:carl-phase-2:1
-Raveyard:carl-phase-3:1
+Dungeon:carl-phase-1:0
+Crystalized:carl-phase-1:0
+Necromancipation:carl-phase-2:0
+Raveyard:carl-phase-3:0

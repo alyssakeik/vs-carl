@@ -788,17 +788,17 @@ class OffsetMenu extends Option
 
 	public override function press():Bool
 	{
-		trace("switch");
-		var poop:String = Highscore.formatSong("Tutorial", 1);
+		trace("please don't re-enable this, it will crash your game.");
+		// var poop:String = Highscore.formatSong("Tutorial", 1);
 
-		PlayState.SONG = Song.loadFromJson(poop, "Tutorial");
-		PlayState.isStoryMode = false;
-		PlayState.storyDifficulty = 0;
-		PlayState.storyWeek = 0;
-		PlayState.offsetTesting = true;
-		trace('CUR WEEK' + PlayState.storyWeek);
-		LoadingState.loadAndSwitchState(new PlayState());
-		return false;
+		// PlayState.SONG = Song.loadFromJson(poop, "Tutorial");
+		// PlayState.isStoryMode = false;
+		// PlayState.storyDifficulty = 0;
+		// PlayState.storyWeek = 0;
+		// PlayState.offsetTesting = true;
+		// trace('CUR WEEK' + PlayState.storyWeek);
+		// LoadingState.loadAndSwitchState(new PlayState());
+		// return false;
 	}
 
 	private override function updateDisplay():String
