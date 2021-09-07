@@ -29,6 +29,7 @@ class StoryMenuState extends MusicBeatState
 		return [
 			['Dungeon', 'Crystalized', 'Necromancipation', 'Raveyard'],
 		    ['Sussus-Moogus', 'Sabatoge', 'Meltdown']
+			['shit yourself']
 		];
 	}
 	var curDifficulty:Int = 1;
@@ -37,7 +38,7 @@ class StoryMenuState extends MusicBeatState
 
 	var weekCharacters:Array<Dynamic> = [
 		['carl', 'bf', ''],
-		['mom', 'bf', 'gf']
+		['', 'bf', '']
 	];
 
 	var weekNames:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/weekNames'));
