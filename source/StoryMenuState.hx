@@ -27,8 +27,8 @@ class StoryMenuState extends MusicBeatState
 	static function weekData():Array<Dynamic>
 	{
 		return [
-			['Tutorial'],
-			['Dungeon', 'Crystalized', 'Necromancipation', 'Raveyard']
+			['Dungeon', 'Crystalized', 'Necromancipation', 'Raveyard'],
+		    ['Sussus-Moogus', 'Sabatoge', 'Meltdown']
 		];
 	}
 	var curDifficulty:Int = 1;
@@ -36,8 +36,8 @@ class StoryMenuState extends MusicBeatState
 	public static var weekUnlocked:Array<Bool> = [];
 
 	var weekCharacters:Array<Dynamic> = [
-		['', 'bf', ''],
-		['carl', 'bf', '']
+		['carl', 'bf', ''],
+		['mom', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/weekNames'));
@@ -93,7 +93,7 @@ class StoryMenuState extends MusicBeatState
 			if (!FlxG.sound.music.playing)
 			{
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
-				Conductor.changeBPM(102);
+				Conductor.changeBPM(140);
 			}
 		}
 
