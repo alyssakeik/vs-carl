@@ -197,7 +197,9 @@ class Stage
 					ground.antialiasing = true;
 					ground.scrollFactor.set(1, 1);
 					ground.active = false;
-					toAdd.push(ground);
+					swagBacks['ground'] = ground;
+					layInFront[2].push(ground);
+					animatedBacks.push(ground);
 
 				}
 			default:
