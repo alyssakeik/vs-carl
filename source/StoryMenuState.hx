@@ -27,8 +27,8 @@ class StoryMenuState extends MusicBeatState
 	static function weekData():Array<Dynamic>
 	{
 		return [
+			//i fixed a crash here
 			['Dungeon', 'Crystalized', 'Necromancipation', 'Raveyard'],
-		    ['Sussus-Moogus', 'Sabatoge', 'Meltdown']
 			['shit yourself']
 		];
 	}
