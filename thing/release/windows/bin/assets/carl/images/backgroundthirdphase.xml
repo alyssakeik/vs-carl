@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="backgroundthirdphase.png">
-	<!-- Created with Adobe Animate version 20.0.3.25487 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="COMPLEGE BACKGOUND0000" x="0" y="0" width="4647" height="3089"/>
-	<SubTexture name="THE FUCKING ALTAR0000" x="4647" y="0" width="1634" height="836"/>
-</TextureAtlas>

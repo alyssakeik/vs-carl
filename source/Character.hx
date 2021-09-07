@@ -137,6 +137,20 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('idle');
+			case 'potionion':
+				var tex = Paths.getSparrowAtlas('potionion', 'shared', true);
+				frames = tex;
+	
+				animation.addByPrefix('idle', 'potion idle', 24, false);
+				animation.addByPrefix('singUP', 'potion up', 24, false);
+				animation.addByPrefix('singDOWN', 'potion down', 24, false);
+				animation.addByPrefix('singLEFT', 'potion left', 24, false);
+				animation.addByPrefix('singRIGHT', 'potion right', 24, false);
+	
+				loadOffsetFile(curCharacter);
+	
+				playAnim('idle');
+	
 
 		}
 

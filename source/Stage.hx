@@ -202,6 +202,28 @@ class Stage
 					animatedBacks.push(ground);
 
 				}
+				case 'void-lol':
+					{
+						camZoom = 0.65;
+						curStage = 'void-lol';
+	
+						var wall:FlxSprite = new FlxSprite(-1273.85, -555.55).loadGraphic(Paths.image('funni/wall lol', 'carl'));
+						wall.updateHitbox();
+						wall.antialiasing = true;
+						wall.scrollFactor.set(1, 1);
+						wall.active = false;
+						swagBacks['wall'] = wall;
+						toAdd.push(wall);
+
+						var devs:FlxSprite = new FlxSprite(-116.15, -7.75);
+						devs.frames = Paths.getSparrowAtlas('funni/the_devs_real', 'carl');
+						devs.animation.addByPrefix('idle', 'the devs real', 24, false);
+						devs.scrollFactor.set(1, 1);
+						devs.antialiasing = true;
+						toAdd.push(devs);
+						swagBacks['devs'] = devs;
+						animatedBacks.push(devs);
+					}
 			default:
 				{
 					camZoom = 0.9;

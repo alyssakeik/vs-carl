@@ -701,6 +701,10 @@ class PlayState extends MusicBeatState
 						dad.setPosition(-706.65, 315.25);
 						boyfriend.setPosition(977.35, 630.1);
 						gf.visible = false;
+					case 'void-lol':
+						dad.setPosition(-303.4, 61.1);
+						boyfriend.setPosition(812.9, 305.4);
+						gf.visible = false;
 				}
 		}
 		else
@@ -5003,7 +5007,9 @@ class PlayState extends MusicBeatState
 					case 'outside':
 						for (bg in Stage.animatedBacks)
 							bg.animation.play('idle');
-
+					case 'void-lol':
+						for (bg in Stage.animatedBacks)
+							bg.animation.play('idle');
 					case 'limo':
 						if (FlxG.save.data.distractions)
 						{
