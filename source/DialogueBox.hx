@@ -55,7 +55,7 @@ class DialogueBox extends FlxSpriteGroup
 				sound.fadeIn(1, 0, 0.8);
 		}
 
-		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
+		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFF000000);
 		bgFade.scrollFactor.set();
 		bgFade.alpha = 0;
 		add(bgFade);
