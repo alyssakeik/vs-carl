@@ -184,7 +184,7 @@ class Stage
 					toAdd.push(crystal);
 
 					var skeletoncrowd:FlxSprite = new FlxSprite(-721.55, 645.95);
-					skeletoncrowd.frames = Paths.getSparrowAtlas('phase4shit', 'carl');
+					skeletoncrowd.frames = Paths.getSparrowAtlas('CROWD', 'carl');
 					skeletoncrowd.animation.addByPrefix('idle', 'the crowd but theyre orange', 24, false);
 					skeletoncrowd.scrollFactor.set(1, 1);
 					skeletoncrowd.antialiasing = true;
