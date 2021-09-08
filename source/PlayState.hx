@@ -690,25 +690,42 @@ class PlayState extends MusicBeatState
 						gf.x += 180;
 						gf.y += 300;
 					case 'basement':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
 						dad.setPosition(-431.9, -42.5);
 						boyfriend.setPosition(1014.85, 292.55);
 						gf.visible = false;
 					case 'cave-thing':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
 						dad.setPosition(-736.15, -94.7);
 						boyfriend.setPosition(1097.75, 305.45);
 						gf.visible = false;
 					case 'finale':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
 						dad.setPosition(-737.9, -94);
 						boyfriend.setPosition(1017.85, 457.45);
 						gf.visible = false;
 					case 'outside':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
 						dad.setPosition(-706.65, 315.25);
 						boyfriend.setPosition(977.35, 630.1);
 						gf.visible = false;
 					case 'void-lol':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
 						dad.setPosition(-303.4, 61.1);
 						boyfriend.setPosition(812.9, 305.4);
 						gf.visible = false;
+					case 'auditorHell':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
+						boyfriend.y -= 160;
+						boyfriend.x += 350;
+						dad.x -= 661;
+						dad.y -= 140;
 				}
 		}
 		else
@@ -5010,23 +5027,10 @@ class PlayState extends MusicBeatState
 							for (bg in Stage.animatedBacks)
 								bg.animation.play('idle');
 						}
-					case 'basement':
-						boyfriend.scrollFactor.set(0.9, 0.9);
-						dad.scrollFactor.set(0.9, 0.9);
-					case 'cave-thing':
-						boyfriend.scrollFactor.set(0.9, 0.9);
-						dad.scrollFactor.set(0.9, 0.9);
-					case 'finale':
-						boyfriend.scrollFactor.set(0.9, 0.9);
-						dad.scrollFactor.set(0.9, 0.9);
 					case 'outside':
-						boyfriend.scrollFactor.set(0.9, 0.9);
-						dad.scrollFactor.set(0.9, 0.9);
 						for (bg in Stage.animatedBacks)
 							bg.animation.play('idle');
 					case 'void-lol':
-						boyfriend.scrollFactor.set(0.9, 0.9);
-						dad.scrollFactor.set(0.9, 0.9);
 						for (bg in Stage.animatedBacks)
 							bg.animation.play('idle');
 					case 'limo':
