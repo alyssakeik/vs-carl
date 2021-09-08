@@ -373,18 +373,16 @@ class TitleState extends MusicBeatState
 			case 7:
 				addMoreText('uniimations');
 			case 8:
-				addMoreText('alykeik');
-			case 9:
-				deleteCoolText();
-				createCoolText(['present']);
+				addMoreText('and alykeik');
 			case 10:
 				deleteCoolText();
-			case 11:
-				deleteCoolText();
-				createCoolText([curWacky[0]]);
-			// credTextShit.text += '\nlmao';
-			case 12:
-				addMoreText(curWacky[1]);
+				createCoolText(['present']);
+			// case 11:
+			// 	deleteCoolText();
+			// 	createCoolText([curWacky[0]]);
+			// // credTextShit.text += '\nlmao';
+			// case 12:
+			// 	addMoreText(curWacky[1]);
 			case 13:
 				deleteCoolText();
 				addMoreText('FNF');
@@ -394,6 +392,8 @@ class TitleState extends MusicBeatState
 				addMoreText('breakout'); // credTextShit.text += '\nFunkin';
 			case 16:
 				skipIntro();
+			// case 118:
+			// 	Conductor.changeBPM()
 		}
 	}
 

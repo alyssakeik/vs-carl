@@ -44,7 +44,7 @@ class Stage
 					wall.frames = Paths.getSparrowAtlas('background', 'carl');
 					wall.animation.addByPrefix('idle', 'BACKGROUND WALL', 24);
 					wall.animation.play('idle');
-					wall.scrollFactor.set(1, 1);
+					wall.scrollFactor.set(0.9, 0.9);
 					wall.active = true;
 					toAdd.push(wall);
 
@@ -52,7 +52,7 @@ class Stage
 					torch.frames = Paths.getSparrowAtlas('the_torch', 'carl');
 					torch.animation.addByPrefix('idle', 'TORCH', 24);
 					torch.animation.play('idle');
-					torch.scrollFactor.set(1, 1);
+					torch.scrollFactor.set(0.9, 0.9);
 					torch.active = true;
 					toAdd.push(torch);
 
@@ -60,7 +60,7 @@ class Stage
 					floor.frames = Paths.getSparrowAtlas('fixed floor', 'carl');
 					floor.animation.addByPrefix('idle', 'BACKGROUND FLOOR 1', 24);
 					floor.animation.play('idle');
-					floor.scrollFactor.set(1, 1);
+					floor.scrollFactor.set(0.9, 0.9);
 					floor.active = true;
 					toAdd.push(floor);
 
@@ -68,7 +68,7 @@ class Stage
 					stairs.frames = Paths.getSparrowAtlas('fixed floor', 'carl');
 					stairs.animation.addByPrefix('idle', 'BACKGROUND FLOOR 2', 24);
 					stairs.animation.play('idle');
-					stairs.scrollFactor.set(1, 1);
+					stairs.scrollFactor.set(0.9, 0.9);
 					stairs.active = true;
 					toAdd.push(stairs);
 				}
@@ -81,13 +81,13 @@ class Stage
 					wall.frames = Paths.getSparrowAtlas('backgroundphase2', 'carl');
 					wall.animation.addByPrefix('idle', 'background wall shit', 24);
 					wall.animation.play('idle');
-					wall.scrollFactor.set(1, 1);
+					wall.scrollFactor.set(0.9, 0.9);
 					wall.active = true;
 					toAdd.push(wall);
 
 					var bones:FlxSprite = new FlxSprite(-141.9, 224).loadGraphic(Paths.image('PILE-OBONES', 'carl'));
 					bones.antialiasing = true;
-					bones.scrollFactor.set(1, 1);
+					bones.scrollFactor.set(0.9, 0.9);
 					bones.active = false;
 					toAdd.push(bones);
 
@@ -95,7 +95,7 @@ class Stage
 					crystal.frames = Paths.getSparrowAtlas('crystal', 'carl');
 					crystal.animation.addByPrefix('idle', 'Crystrill instance 1', 24);
 					crystal.animation.play('idle');
-					crystal.scrollFactor.set(1, 1);
+					crystal.scrollFactor.set(0.9, 0.9);
 					crystal.active = true;
 					toAdd.push(crystal);
 
@@ -103,7 +103,7 @@ class Stage
 					rails.frames = Paths.getSparrowAtlas('backgroundphase2', 'carl');
 					rails.animation.addByPrefix('idle', 'the fucking rails', 24);
 					rails.animation.play('idle');
-					rails.scrollFactor.set(1, 1);
+					rails.scrollFactor.set(0.9, 0.9);
 					rails.active = true;
 					toAdd.push(rails);
 
@@ -111,7 +111,7 @@ class Stage
 					otherwall.frames = Paths.getSparrowAtlas('backgroundphase2', 'carl');
 					otherwall.animation.addByPrefix('idle', 'BROKEN WALL', 24);
 					otherwall.animation.play('idle');
-					otherwall.scrollFactor.set(1, 1);
+					otherwall.scrollFactor.set(0.9, 0.9);
 					otherwall.active = true;
 					layInFront[2].push(otherwall);
 
@@ -119,7 +119,7 @@ class Stage
 					torch1.frames = Paths.getSparrowAtlas('the_torch', 'carl');
 					torch1.animation.addByPrefix('idle', 'TORCH', 24);
 					torch1.animation.play('idle');
-					torch1.scrollFactor.set(1, 1);
+					torch1.scrollFactor.set(0.9, 0.9);
 					torch1.active = true;
 					layInFront[2].push(torch1);
 
@@ -127,7 +127,7 @@ class Stage
 					torch2.frames = Paths.getSparrowAtlas('the_torch', 'carl');
 					torch2.animation.addByPrefix('idle', 'TORCH', 24);
 					torch2.animation.play('idle');
-					torch2.scrollFactor.set(1, 1);
+					torch2.scrollFactor.set(0.9, 0.9);
 					torch2.active = true;
 					layInFront[2].push(torch2);
 
@@ -142,7 +142,7 @@ class Stage
 					wall.frames = Paths.getSparrowAtlas('backgroundthirdphase', 'carl');
 					wall.animation.addByPrefix('idle', 'COMPLEGE BACKGOUND', 24);
 					wall.animation.play('idle');
-					wall.scrollFactor.set(1, 1);
+					wall.scrollFactor.set(0.9, 0.9);
 					wall.active = true;
 					toAdd.push(wall);
 
@@ -150,7 +150,7 @@ class Stage
 					crystal.frames = Paths.getSparrowAtlas('HUGE', 'carl');
 					crystal.animation.addByPrefix('idle', 'A FUCKING LARGE AS FUUUUUUCK CRYSSAL', 24);
 					crystal.animation.play('idle');
-					crystal.scrollFactor.set(1, 1);
+					crystal.scrollFactor.set(0.9, 0.9);
 					crystal.active = true;
 					toAdd.push(crystal);
 
@@ -158,7 +158,7 @@ class Stage
 					altar.frames = Paths.getSparrowAtlas('backgroundthirdphase', 'carl');
 					altar.animation.addByPrefix('idle', 'THE FUCKING ALTAR', 24);
 					altar.animation.play('idle');
-					altar.scrollFactor.set(1, 1);
+					altar.scrollFactor.set(0.9, 0.9);
 					altar.active = true;
 					toAdd.push(altar);
 				}
@@ -171,7 +171,7 @@ class Stage
 					wall.frames = Paths.getSparrowAtlas('phase4shit', 'carl');
 					wall.animation.addByPrefix('idle', 'HTE MOTHA FUCKIN BACKGROUND FOR $', 24);
 					wall.animation.play('idle');
-					wall.scrollFactor.set(1, 1);
+					wall.scrollFactor.set(0.9, 0.9);
 					wall.active = true;
 					toAdd.push(wall);
 
@@ -179,14 +179,14 @@ class Stage
 					crystal.frames = Paths.getSparrowAtlas('phase4shit', 'carl');
 					crystal.animation.addByPrefix('idle', 'LMAO RIP BOZO CRYSTAL', 24);
 					crystal.animation.play('idle');
-					crystal.scrollFactor.set(1, 1);
+					crystal.scrollFactor.set(0.9, 0.9);
 					crystal.active = true;
 					toAdd.push(crystal);
 
 					var skeletoncrowd:FlxSprite = new FlxSprite(-721.55, 645.95);
 					skeletoncrowd.frames = Paths.getSparrowAtlas('CROWD', 'carl');
 					skeletoncrowd.animation.addByPrefix('idle', 'the crowd but theyre orange', 24, false);
-					skeletoncrowd.scrollFactor.set(1, 1);
+					skeletoncrowd.scrollFactor.set(0.9, 0.9);
 					skeletoncrowd.antialiasing = true;
 					swagBacks['skeletoncrowd'] = skeletoncrowd;
 					layInFront[2].push(skeletoncrowd);
@@ -195,7 +195,7 @@ class Stage
 					var ground:FlxSprite = new FlxSprite(-17.75, 1062.85).loadGraphic(Paths.image('CREAM', 'carl'));
 					ground.updateHitbox();
 					ground.antialiasing = true;
-					ground.scrollFactor.set(1, 1);
+					ground.scrollFactor.set(0.9, 0.9);
 					ground.active = false;
 					swagBacks['ground'] = ground;
 					layInFront[2].push(ground);
@@ -210,7 +210,7 @@ class Stage
 						var wall:FlxSprite = new FlxSprite(-1273.85, -555.55).loadGraphic(Paths.image('funni/wall lol', 'carl'));
 						wall.updateHitbox();
 						wall.antialiasing = true;
-						wall.scrollFactor.set(1, 1);
+						wall.scrollFactor.set(0.9, 0.9);
 						wall.active = false;
 						swagBacks['wall'] = wall;
 						toAdd.push(wall);
@@ -218,7 +218,7 @@ class Stage
 						var devs:FlxSprite = new FlxSprite(-116.15, -7.75);
 						devs.frames = Paths.getSparrowAtlas('funni/the_devs_real', 'carl');
 						devs.animation.addByPrefix('idle', 'the devs real', 24, false);
-						devs.scrollFactor.set(1, 1);
+						devs.scrollFactor.set(0.9, 0.9);
 						devs.antialiasing = true;
 						toAdd.push(devs);
 						swagBacks['devs'] = devs;

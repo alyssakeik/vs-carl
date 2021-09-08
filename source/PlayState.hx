@@ -5004,7 +5004,18 @@ class PlayState extends MusicBeatState
 							for (bg in Stage.animatedBacks)
 								bg.animation.play('idle');
 						}
+					case 'basement':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
+					case 'cave-thing':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
+					case 'finale':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
 					case 'outside':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
 						for (bg in Stage.animatedBacks)
 							bg.animation.play('idle');
 					case 'void-lol':
