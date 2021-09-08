@@ -23,9 +23,9 @@ class CharacterSetting
 class MenuCharacter extends FlxSprite
 {
 	private static var settings:Map<String, CharacterSetting> = [
-		'bf' => new CharacterSetting(0, -30, 0.6, true),
+		'bf' => new CharacterSetting(-400, -25, 0.6, true),
 		'gf' => new CharacterSetting(50, 80, 0.9, true),
-		'carl' => new CharacterSetting(110, 20, 1.4, false)
+		'carl' => new CharacterSetting(73, 32, 1.6, false)
 	];
 
 	private var flipped:Bool = false;

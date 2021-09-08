@@ -1006,22 +1006,24 @@ class PlayState extends MusicBeatState
         {
          switch (SONG.player2)
            {
-             case 'gf':
+            case 'gf':
              healthBar.createFilledBar(0xFFFF0000, 0xFF0097C4);
-             case 'dad' | 'mom-car' | 'parents-christmas':
+            case 'dad' | 'mom-car' | 'parents-christmas':
              healthBar.createFilledBar(0xFF5A07F5, 0xFF0097C4);
-             case 'spooky':
+            case 'spooky':
               healthBar.createFilledBar(0xFFF57E07, 0xFF0097C4);
-             case 'monster-christmas' | 'monster':
+            case 'monster-christmas' | 'monster':
               healthBar.createFilledBar(0xFFF5DD07, 0xFF0097C4);
-             case 'pico':
+            case 'pico':
               healthBar.createFilledBar(0xFF52B514, 0xFF0097C4);
-             case 'senpai' | 'senpai-angry':
+            case 'senpai' | 'senpai-angry':
               healthBar.createFilledBar(0xFFF76D6D, 0xFF0097C4);
-             case 'spirit':
+            case 'spirit':
               healthBar.createFilledBar(0xFFAD0505, 0xFF0097C4);
-			 case 'carl-phase-1' | 'carl-phase-2' | 'carl-phase-3':
+			case 'carl-phase-1' | 'carl-phase-2' | 'carl-phase-3':
 			  healthBar.createFilledBar(0xFFB065FF, 0xFF0097C4);
+			case 'potionion':
+			  healthBar.createFilledBar(0xFFCCCCCC, 0xFF0097C4);
             }
         }
         else
