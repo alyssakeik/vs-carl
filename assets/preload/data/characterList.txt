@@ -1,6 +1,17 @@
+null-character
+---------------
+Player 1
+---------------
 bf
-carl-phase-1
+---------------
+Player 2
+---------------
+carl
 carl-phase-2
 carl-phase-3
 potionion
+---------------
+Miscellaneous
+---------------
 gf
+bf-carl-dead
