@@ -280,7 +280,7 @@ class StepManiaOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Colors by quantization " + (!FlxG.save.data.stepMania ? "off" : "on");
+		return "Color by quantization " + (!FlxG.save.data.stepMania ? "off" : "on");
 	}
 }
 

@@ -506,6 +506,8 @@ class PlayState extends MusicBeatState
 							stageCheck = 'finale';
 						case 'raveyard':
 							stageCheck = 'raveyard';
+						case 'carlspurgation':
+							stageCheck = 'auditorHell';
 					}
 
 				}
@@ -527,6 +529,8 @@ class PlayState extends MusicBeatState
 		{
 			switch (storyWeek)
 			{
+				case 2:
+					gfCheck = 'gf-ex';
 				case 4:
 					gfCheck = 'gf-car';
 				case 5:
@@ -5021,6 +5025,8 @@ class PlayState extends MusicBeatState
 						for (bg in Stage.animatedBacks)
 							bg.animation.play('idle');
 					case 'void-lol':
+						boyfriend.scrollFactor.set(0.9, 0.9);
+						dad.scrollFactor.set(0.9, 0.9);
 						for (bg in Stage.animatedBacks)
 							bg.animation.play('idle');
 					case 'limo':

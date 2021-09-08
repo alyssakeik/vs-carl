@@ -49,7 +49,22 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('danceRight');
+			case 'gf-ex':
+					// GIRLFRIEND CODE
+					tex = Paths.getSparrowAtlas('EX Tricky GF','shared',true);
+					frames = tex;
+					animation.addByPrefix('cheer', 'GF Ex Tricky', 24, false);
+					animation.addByPrefix('singLEFT', 'GF Ex Tricky', 24, false);
+					animation.addByPrefix('singRIGHT', 'GF Ex Tricky', 24, false);
+					animation.addByPrefix('singUP', 'GF Ex Tricky', 24, false);
+					animation.addByPrefix('singDOWN', 'GF Ex Tricky', 24, false);
+					animation.addByIndices('sad', 'GF Ex Tricky', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+					animation.addByIndices('danceLeft', 'GF Ex Tricky', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+					animation.addByIndices('danceRight', 'GF Ex Tricky', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 
+					loadOffsetFile(curCharacter);
+	
+					playAnim('danceRight');
 			case 'bf':
 				var tex = Paths.getSparrowAtlas('BOYFRIEND','shared',true);
 				frames = tex;
@@ -150,8 +165,19 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 	
 				playAnim('idle');
+			case 'tricky':
+				var tex = Paths.getSparrowAtlas('CARLBUTTIKY', 'shared', true);
+				frames = tex;
 	
-
+				animation.addByPrefix('idle', 'Carl Idle', 24, false);
+				animation.addByPrefix('singUP', 'Carl Up', 24, false);
+				animation.addByPrefix('singDOWN', 'Carl Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Carl Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Carl Right', 24, false);
+	
+				loadOffsetFile(curCharacter);
+	
+				playAnim('idle');
 		}
 
 		dance();

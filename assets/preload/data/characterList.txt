@@ -6,10 +6,11 @@ bf
 ---------------
 Player 2
 ---------------
-carl
+carl-phase-1
 carl-phase-2
 carl-phase-3
 potionion
+tricky
 ---------------
 Miscellaneous
 ---------------

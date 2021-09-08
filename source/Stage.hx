@@ -224,6 +224,46 @@ class Stage
 						swagBacks['devs'] = devs;
 						animatedBacks.push(devs);
 					}
+				case 'auditorHell':
+					{
+				    	camZoom = 0.55;
+				    	curStage = 'auditorHell';
+
+				    	var bg:FlxSprite = new FlxSprite(-10, -10).loadGraphic(Paths.image('funni/bg', 'carl'));
+				    	bg.antialiasing = true;
+				    	bg.scrollFactor.set(0.9, 0.9);
+				    	bg.active = false;
+				    	bg.setGraphicSize(Std.int(bg.width * 4));
+						swagBacks['bg'] = bg;
+						toAdd.push(bg);
+
+						var converHole:FlxSprite = new FlxSprite(7,578).loadGraphic(Paths.image('funni/Spawnhole_Ground_COVER','carl'));
+						converHole.antialiasing = true;
+						converHole.scrollFactor.set(0.9, 0.9);
+						converHole.setGraphicSize(Std.int(converHole.width * 1.3));
+						swagBacks['converHole'] = converHole;
+						toAdd.push(converHole);
+
+						var cover:FlxSprite = new FlxSprite(-180,755).loadGraphic(Paths.image('funni/cover','carl'));
+						cover.antialiasing = true;
+						cover.scrollFactor.set(0.9, 0.9);
+						cover.setGraphicSize(Std.int(cover.width * 1.55));
+						swagBacks['cover'] = cover;
+						toAdd.push(cover);
+
+						var energyWall:FlxSprite = new FlxSprite(1350,-690).loadGraphic(Paths.image("funni/Energywall","carl"));
+						energyWall.antialiasing = true;
+						energyWall.scrollFactor.set(0.9, 0.9);
+						swagBacks['energyWall'] = energyWall;
+						toAdd.push(energyWall);
+
+						var stageFront:FlxSprite = new FlxSprite(-350, -355).loadGraphic(Paths.image('funni/daBackground','carl'));
+						stageFront.antialiasing = true;
+						stageFront.scrollFactor.set(0.9, 0.9);
+						stageFront.setGraphicSize(Std.int(stageFront.width * 1.55));
+						swagBacks['stageFront'] = stageFront;
+						toAdd.push(stageFront);
+					}
 			default:
 				{
 					camZoom = 0.9;
