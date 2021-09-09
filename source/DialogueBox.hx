@@ -53,6 +53,17 @@ class DialogueBox extends FlxSpriteGroup
 				sound.volume = 0;
 				FlxG.sound.list.add(sound);
 				sound.fadeIn(1, 0, 0.8);
+			case 'dungeon' | 'crystalized' | 'necromancipation':
+				sound = new FlxSound().loadEmbedded(Paths.music('carldialogue', 'carl'),true);
+				sound.volume = 0;
+				FlxG.sound.list.add(sound);
+				sound.fadeIn(1, 0, 0.8);
+			//this is gonna be added soon this is just a reminder for me cuz im dumb lol
+			/*case 'raveyard':
+				sound = new FlxSound().loadEmbedded(Paths.music('outside', 'carl'),true);
+				sound.volume = 0;
+				FlxG.sound.list.add(sound);
+				sound.fadeIn(1, 0, 0.8);*/
 		}
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFF000000);
@@ -139,7 +150,7 @@ class DialogueBox extends FlxSpriteGroup
 		swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
 		swagDialogue.font = 'Pixel Arial 11 Bold';
 		swagDialogue.color = 0xFF3F2021;
-		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
+		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('dialogue/pixelText'), 0.6)];
 		add(swagDialogue);
 
 		dialogue = new Alphabet(0, 80, "", false, true);
@@ -190,9 +201,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!isEnding)
 				{
 					isEnding = true;
-
-					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns')
-						sound.fadeOut(2.2, 0);
+					sound.fadeOut(2.2, 0);
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
 					{
 						box.alpha -= 1 / 5;
@@ -241,6 +250,8 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
+					swagDialogue.sounds = [FlxG.sound.load(Paths.sound('dialogue/pixelText'), 0.6)];
+					trace('carl (in  cool way)');
 				}
 			case 'bf':
 				portraitLeft.visible = false;
@@ -248,6 +259,8 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					portraitRight.visible = true;
 					portraitRight.animation.play('enter');
+					swagDialogue.sounds = [FlxG.sound.load(Paths.sound('dialogue/boyfriendText'), 0.6)];
+					trace('bf');
 				}
 		}
 	}
