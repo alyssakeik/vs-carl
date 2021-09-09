@@ -1045,6 +1045,8 @@ class PlayState extends MusicBeatState
 			  healthBar.createFilledBar(0xFFB065FF, 0xFF0097C4);
 			case 'potionion':
 			  healthBar.createFilledBar(0xFFCCCCCC, 0xFF0097C4);
+			case 'tricky':
+			  healthBar.createFilledBar(0xFFFF0000, 0xFF0097C4);
             }
         }
         else
