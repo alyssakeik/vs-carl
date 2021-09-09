@@ -651,8 +651,7 @@ class PlayState extends MusicBeatState
 					}
 					case 'carl-phase-1':
 						{
-							camPos.x += 50;
-							tweenCamIn();
+							//do nothing lol
 						}
 
 					dad.x -= 150;
@@ -1061,7 +1060,7 @@ class PlayState extends MusicBeatState
 			+ (FlxMath.roundDecimal(songMultiplier, 2) != 1.00 ? " (" + FlxMath.roundDecimal(songMultiplier, 2) + "x)" : "")
 			+ " - "
 			+ CoolUtil.difficultyFromInt(storyDifficulty)
-			+ ("|V.2.0"), 16);
+			+ (""), 16);
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		kadeEngineWatermark.scrollFactor.set();
 		add(kadeEngineWatermark);
