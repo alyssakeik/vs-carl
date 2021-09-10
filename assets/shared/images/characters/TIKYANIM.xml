@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="TIKYANIM.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="animgatuons0000" x="0" y="0" width="570" height="422" frameX="-335" frameY="-330" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0001" x="570" y="0" width="601" height="402" frameX="-304" frameY="-350" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0002" x="570" y="0" width="601" height="402" frameX="-304" frameY="-350" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0003" x="1171" y="0" width="638" height="358" frameX="-272" frameY="-392" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0004" x="1171" y="0" width="638" height="358" frameX="-272" frameY="-392" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0005" x="1809" y="0" width="616" height="600" frameX="-289" frameY="-155" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0006" x="2425" y="0" width="607" height="600" frameX="-289" frameY="-155" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0007" x="3032" y="0" width="768" height="629" frameX="-293" frameY="-119" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0008" x="3800" y="0" width="768" height="629" frameX="-293" frameY="-119" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0009" x="4568" y="0" width="627" height="592" frameX="-364" frameY="-156" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0010" x="5195" y="0" width="504" height="592" frameX="-377" frameY="-156" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0011" x="5699" y="0" width="509" height="599" frameX="-372" frameY="-149" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0012" x="6208" y="0" width="509" height="599" frameX="-372" frameY="-149" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0013" x="6717" y="0" width="615" height="578" frameX="-362" frameY="-170" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0014" x="7332" y="0" width="615" height="578" frameX="-362" frameY="-170" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0015" x="0" y="629" width="684" height="580" frameX="-308" frameY="-168" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0016" x="684" y="629" width="684" height="580" frameX="-308" frameY="-168" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0017" x="1368" y="629" width="712" height="576" frameX="-279" frameY="-172" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0018" x="2080" y="629" width="712" height="576" frameX="-279" frameY="-172" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0019" x="2792" y="629" width="687" height="571" frameX="-300" frameY="-177" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0020" x="2792" y="629" width="687" height="571" frameX="-300" frameY="-177" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0021" x="3479" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0022" x="3479" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0023" x="4783" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0024" x="4783" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0025" x="6087" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0026" x="6087" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0027" x="0" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0028" x="0" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0029" x="1304" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0030" x="1304" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0031" x="2608" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0032" x="2608" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0033" x="3912" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0034" x="3912" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0035" x="3479" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0036" x="3479" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0037" x="4783" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0038" x="4783" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0039" x="6087" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0040" x="6087" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0041" x="0" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0042" x="0" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0043" x="1304" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0044" x="1304" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0045" x="2608" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0046" x="2608" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0047" x="3912" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0048" x="3912" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0049" x="3479" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0050" x="3479" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0051" x="4783" y="629" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0052" x="5216" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0053" x="6520" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0054" x="0" y="2279" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0055" x="1304" y="2279" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0056" x="2608" y="2279" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0057" x="3912" y="2279" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0058" x="5216" y="2279" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0059" x="6520" y="2279" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0060" x="0" y="3104" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0061" x="1304" y="3104" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0062" x="2608" y="3104" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0063" x="3912" y="3104" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0064" x="5216" y="3104" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0065" x="6520" y="3104" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0066" x="0" y="3929" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0067" x="1304" y="3929" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0068" x="2608" y="3929" width="1380" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0069" x="3988" y="3929" width="1380" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0070" x="5368" y="3929" width="1457" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0071" x="0" y="4754" width="1457" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0072" x="1457" y="4754" width="1468" height="825"/>
+	<SubTexture name="animgatuons0073" x="2925" y="4754" width="1468" height="825"/>
+	<SubTexture name="animgatuons0074" x="4393" y="4754" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0075" x="5697" y="4754" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0076" x="3912" y="1454" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0077" x="0" y="5579" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0078" x="0" y="5579" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0079" x="1304" y="5579" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+	<SubTexture name="animgatuons0080" x="1304" y="5579" width="1304" height="825" frameX="0" frameY="0" frameWidth="1468" frameHeight="825"/>
+</TextureAtlas>

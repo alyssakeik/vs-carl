@@ -28,7 +28,7 @@ class StoryMenuState extends MusicBeatState
 	{
 		return [
 			['Dungeon', 'Crystalized', 'Necromancipation', 'Raveyard'],
-			['Warning', 'Close-The-Game', 'Carlspurgation']
+			['Warning', 'Carlspurgation']
 		];
 	}
 	var curDifficulty:Int = 1;

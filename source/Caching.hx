@@ -83,7 +83,7 @@ class Caching extends MusicBeatState
 		FlxGraphic.defaultPersist = FlxG.save.data.cacheImages;
 
 		#if cpp
-		if (FlxG.save.data.cacheImages)
+		//i gotta make it preload characters no matter what so that the expurgation anim will work sry al
 		{
 			trace("caching images...");
 

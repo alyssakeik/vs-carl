@@ -155,7 +155,7 @@ class Character extends FlxSprite
 			case 'potionion':
 				var tex = Paths.getSparrowAtlas('potionion', 'shared', true);
 				frames = tex;
-	
+
 				animation.addByPrefix('idle', 'potion idle', 24, false);
 				animation.addByPrefix('singUP', 'potion up', 24, false);
 				animation.addByPrefix('singDOWN', 'potion down', 24, false);
@@ -174,10 +174,40 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Carl Down', 24, false);
 				animation.addByPrefix('singLEFT', 'Carl Left', 24, false);
 				animation.addByPrefix('singRIGHT', 'Carl Right', 24, false);
+				animation.addByPrefix('singRIGHT', 'Carl Right', 24, false);
 	
 				loadOffsetFile(curCharacter);
-	
+
 				playAnim('idle');
+			case 'tricky-anim':
+				var tex = Paths.getSparrowAtlas('TRIKYANIM', 'shared', true);
+				frames = tex;
+	
+				//idk if this code is useless or not but i added it so it doenst crash??
+				//just in case yknow (i hope ash doesnt see this ajhsdfjhsdjhsdjk)
+				animation.addByPrefix('idle', 'animgatuons', 24, false);
+				animation.addByPrefix('singUP', 'animgatuons', 24, false);
+				animation.addByPrefix('singDOWN', 'animgatuons', 24, false);
+				animation.addByPrefix('singLEFT', 'animgatuons', 24, false);
+				animation.addByPrefix('singRIGHT', 'animgatuons', 24, false);
+
+				animation.addByPrefix('intro', 'animgatuons', 24, false);
+
+				loadOffsetFile(curCharacter);
+			case 'carl-onslaught':
+				var tex = Paths.getSparrowAtlas('carls_onslaught', 'shared', true);
+				frames = tex;
+
+				animation.addByIndices('danceLeft', 'Onslaught Idle', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'Onslaught Idle', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByPrefix('singUP', 'Onslaught Up', 24, false);
+				animation.addByPrefix('singDOWN', 'Onslaught Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Onslaught Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Onslaught Right', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('danceRight');
 		}
 
 		dance();
