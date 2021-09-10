@@ -65,6 +65,7 @@ class ResultsScreen extends FlxSubState
             music.volume = 0;
             music.play(false, FlxG.random.int(0, Std.int(music.length / 2)));
             FlxG.sound.list.add(music);
+            PlayState.inResults = true;
         }
 
         background.alpha = 0;

@@ -2258,9 +2258,10 @@ class PlayState extends MusicBeatState
 					// so no reason to delete it at all
 					if (unspawnNotes.length == 0 && notes.length == 0)
 					{
-						endingSong = true;
+						
 						new FlxTimer().start(2, function(timer) {
 							endSong();
+							endingSong = true;
 						});
 					}
 				}
@@ -3610,10 +3611,11 @@ class PlayState extends MusicBeatState
 						else
 						{
 						openSubState(new ResultsScreen());
-						new FlxTimer().start(1, function(tmr:FlxTimer)
+						
+						/*new FlxTimer().start(1, function(tmr:FlxTimer)
 							{
-								inResults = true;
-							});
+								
+							});*/
 						}
 					}
 					else
@@ -3773,14 +3775,14 @@ class PlayState extends MusicBeatState
 
 				FlxG.sound.music.stop();
 				vocals.stop();
-
+				persistentUpdate = false;
 				if (FlxG.save.data.scoreScreen) 
 				{
 					openSubState(new ResultsScreen());
-					new FlxTimer().start(1, function(tmr:FlxTimer)
+					/*new FlxTimer().start(1, function(tmr:FlxTimer)
 						{
 							inResults = true;
-						});
+						});*/
 				}
 				else
 				{

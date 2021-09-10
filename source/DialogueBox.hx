@@ -201,7 +201,8 @@ class DialogueBox extends FlxSpriteGroup
 				if (!isEnding)
 				{
 					isEnding = true;
-					sound.fadeOut(2.2, 0);
+					if (PlayState.SONG.song.toLowerCase() != 'raveyard')
+						sound.fadeOut(2.2, 0);
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
 					{
 						box.alpha -= 1 / 5;
