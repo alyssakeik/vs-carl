@@ -58,7 +58,7 @@ class Stage
 
 					var floor:FlxSprite = new FlxSprite(-422.35, 564.45);
 					floor.frames = Paths.getSparrowAtlas('fixed floor', 'carl');
-					floor.animation.addByPrefix('idle', 'BACKGROUND FLOOR 1', 24);
+					floor.animation.addByPrefix('idle', 'BACKGROUND FLOOR1', 24);
 					floor.animation.play('idle');
 					floor.scrollFactor.set(0.9, 0.9);
 					floor.active = true;
@@ -175,7 +175,7 @@ class Stage
 					wall.active = true;
 					toAdd.push(wall);
 
-					var crystal:FlxSprite = new FlxSprite(-1142.5, -231.3);
+					var crystal:FlxSprite = new FlxSprite(-1163.5, -231.05);
 					crystal.frames = Paths.getSparrowAtlas('phase4shit', 'carl');
 					crystal.animation.addByPrefix('idle', 'LMAO RIP BOZO CRYSTAL', 24);
 					crystal.animation.play('idle');
@@ -207,7 +207,7 @@ class Stage
 						camZoom = 0.65;
 						curStage = 'void-lol';
 	
-						var wall:FlxSprite = new FlxSprite(-1273.85, -555.55).loadGraphic(Paths.image('funni/wall lol', 'carl'));
+						var wall:FlxSprite = new FlxSprite(-1274.25, -555.8).loadGraphic(Paths.image('funni/wall lol', 'carl'));
 						wall.updateHitbox();
 						wall.antialiasing = true;
 						wall.scrollFactor.set(0.9, 0.9);
@@ -215,7 +215,7 @@ class Stage
 						swagBacks['wall'] = wall;
 						toAdd.push(wall);
 
-						var devs:FlxSprite = new FlxSprite(-116.15, -7.75);
+						var devs:FlxSprite = new FlxSprite(-113.95, -15.8);
 						devs.frames = Paths.getSparrowAtlas('funni/the_devs_real', 'carl');
 						devs.animation.addByPrefix('idle', 'the devs real', 24, false);
 						devs.scrollFactor.set(0.9, 0.9);

@@ -307,7 +307,7 @@ class Character extends FlxSprite
 						else
 							playAnim('danceLeft');
 					}
-				case 'spooky':
+				case 'spooky' | 'carls_onslaught':
 					if (!animation.curAnim.name.startsWith('sing'))
 					{
 						danced = !danced;

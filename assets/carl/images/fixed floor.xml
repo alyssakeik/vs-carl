@@ -2,6 +2,6 @@
 <TextureAtlas imagePath="fixed floor.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="BACKGROUND FLOOR 10000" x="0" y="0" width="2478" height="307"/>
-	<SubTexture name="BACKGROUND FLOOR 20000" x="2478" y="0" width="676" height="549"/>
+	<SubTexture name="BACKGROUND FLOOR 20000" x="0" y="0" width="676" height="549"/>
+	<SubTexture name="BACKGROUND FLOOR10000" x="676" y="0" width="2478" height="533"/>
 </TextureAtlas>
