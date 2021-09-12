@@ -4,3 +4,4 @@ Necromancipation:carl-phase-2:0
 Raveyard:carl-phase-3:0
 Warning:potionion:1
 Carlspurgation:tricky:1
+Onslaught:carl-onslaught:1
